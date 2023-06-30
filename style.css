@@ -1,0 +1,166 @@
+/* Geral */
+
+:root {
+  --cor-botao: #102f5e;
+  --cor-br: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("imagens/fundo.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+button{
+    background-color: #fdfdfd;
+    color:  var(--cor-botao);
+    border: 2px solid var(--cor-botao);
+    padding: .3rem .6rem;
+    font: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover{
+    background-color: var(--cor-botao);
+    color:  var(--cor-br);
+}
+
+button:hover > i{
+    color:  var(--cor-br);
+}
+
+button i {
+    color: var(--cor-botao);
+    font-weight: bold;
+    pointer-events: none;
+}
+
+input, select{
+    padding: 0.25rem 0.5rem;
+}
+
+.hide{
+    display: none;
+}
+
+/* todo header */
+
+.todo-container{
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color:  var(--cor-br);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.tarefa-container header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid var(--cor-br);
+}
+
+/* Todo form */
+
+#todo-form, #edit-form{
+    padding: 1rem;
+    border-bottom: 1px solid var(--cor-br);
+}
+
+#todo-form p, #edit-form p{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control{
+    display: flex;
+}
+
+.form-control input{
+    margin-right: 0.3rem;
+}
+
+#cancel-edit-btn{
+    margin-top: 1rem;
+}
+
+/* Todo toolbar */
+
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid var(--cor-br);
+    display: flex;
+}
+
+#toolbar h4{
+    margin-bottom: .5rem;
+}
+
+#search{
+    border-right: 1rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    flex-direction: column;
+}
+
+#search form{
+    display: flex;
+}
+
+#search input{
+    width: 100%;
+    margin-right: 0.3rem;
+
+}
+
+#filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select{
+    flex: 1;
+}
+
+/* Todo List */
+
+.todo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid  var(--cor-br);
+    transition: .3s;
+}
+
+.todo h3{
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.todo button{
+    margin-left: 0.4rem;
+}
+
+.done{
+    background-color:  var(--cor-botao);
+}
+
+.done h3{
+    color:  var(--cor-br);
+    text-decoration: line-through;
+    font-style: italic;
+}
